@@ -3,7 +3,8 @@ Application Guide:
         use : git clone https://github.com/gollaganesh435/MCBInsufficientFund.git
  2) Backend :
 
-	Open it in any Idea and run InsufficientFundApplication.java file.
+	a) Open it in any Idea and run InsufficientFundApplication.java file.
+	b) Check the postman collection to test apis
  3) UI :
      
       a) run : npm install -f
