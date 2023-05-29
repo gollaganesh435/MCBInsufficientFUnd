@@ -1,0 +1,64 @@
+<!-- <br> -->
+<div class="row breadcrump">
+    <h4>Fund Availability</h4>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-1 approve">
+        <button class="btn btn-info" (click)="approveBatch('APPROVE')">Approve</button>
+    </div>
+    <div class="col-md-1 approve">
+        <button class="btn btn-info" (click)="approveBatch('REJECT')">Reject</button>
+    </div>
+</div><br>
+<div class="toaster" *ngIf="message == true">
+    <p class="message">{{messageText}}</p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <div class="form-check">
+                    <input class="form-check-input" (change)="onCheckboxChange($event)" type="checkbox"  id="flexCheckDefault"  value="ALL" >
+                   
+                </div>
+            </th>
+            <th>Customer Number</th>
+            <th>Application</th>
+            <th>Customer Name</th>
+            <th>Account Number</th>
+            <th>Currency</th>
+            <th>Trans Amt</th>
+            <th>Account Officer</th>
+            <th>Alternate Account Officer</th>
+            <th>Date mail sent to AO</th>
+            <!-- <th></th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of fundReqList">
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" (change)="onCheckboxChange($event)" type="checkbox"  id="flexCheckDefault"  value={{list.id}} >
+                    <!-- <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label> -->
+                </div>
+            </td>
+            <td>{{list.customer_number}}</td>
+            <td>{{list.application}}</td>
+            <td>{{list.customer_name}}</td>
+            <td>{{list.debit_account_number}}</td>
+            <td>{{list.transaction_currency}}</td>
+            <td>{{list.transaction_amount}}</td>
+            <td>{{list.accountOfficer}}</td>
+            <td>{{list.alt_account_officer}}</td>
+            <td>{{list.date_mail_sent}}</td>
+            <!-- <td><button class="btn btn-info" (click)="viewForm()">View</button></td> -->
+        </tr>
+    </tbody>
+</table>
+<div class="text-center pt-1" *ngIf="fundReqList.length == 0">
+    No Data Available
+  </div>

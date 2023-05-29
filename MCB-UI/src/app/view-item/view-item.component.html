@@ -1,0 +1,185 @@
+<br>
+<button class="button" (click)="back()">Back</button>
+
+<div class="d-flex align-items-center justify-content-center">
+    
+    <div class="card outer-card"  style="width: 75%">
+        <div class="header">
+            <h4>Insufficient Funds</h4>
+        </div>
+        <form [formGroup]="requestForm">
+            <label for=""><b>Insuffiecient Funds Override</b></label>
+            <textarea cols="30" rows="3" formControlName="override" class="card form-control"></textarea>
+            <div class="card">
+                <div class="card-header"><b>Document</b></div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Reference
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" formControlName="business_key" class="form-control">
+                    </div>
+                    <div class="col-md-5">
+                        <b>Captured By :</b> <p>{{itemData.created_by}}</p> 
+                    </div>
+                    <div class="col-md-3">
+                        Source BU
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" formControlName="bu_name" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><b>Debit Account Details</b></div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Account No.
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" formControlName="debit_account_number" class="form-control">
+                    </div>
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-3">
+                        Name
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" formControlName="customer_name" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                       Current Account Balance
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" formControlName="debit_account_balance" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><b>Customer Information</b></div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Customer No.
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" formControlName="customer_number" class="form-control">
+                    </div>
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-3">
+                        Name
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" formControlName="customer_name" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><b>Transfer Details</b></div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Currency
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" formControlName="transaction_currency" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        Amount
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" formControlName="transaction_amount" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        Debit Account Currency Equivalent
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" formControlName="amount_in_debit_account_ccy" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        MUR Equivalent
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" formControlName="amount_in_mur" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><b>Beneficiary Details</b></div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Account No./IBAN
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" formControlName="beneficiary_account_number" class="form-control">
+                    </div>
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-3">
+                        Name
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" formControlName="beneficiary_name" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><b>Deal Ticket Details</b></div>
+                <div class="row">
+                    <div class="col-md-3">
+                       Agreed Rate
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text"  formControlName="agreed_rate"class="form-control">
+                    </div>
+                    <div class="col-md-5">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><b>Payment Details</b></div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Payment Details
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" formControlName="payment_details_1" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" formControlName="payment_details_2" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" formControlName="payment_details_3" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" formControlName="payment_details_4" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><b>Override</b></div>
+                <div class="row">
+                    <div class="col-md-3 ml-5">
+                        Override Insufficient Funds
+                    </div>
+                    <div class="col-md-4">
+                        <input type="radio" formControlName="verified" name="verified"  value="YES">
+                        <label for="">Yes</label>
+                        <input type="radio" formControlName="verified" name="verified" value="NO">
+                        <label for="">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><b>Comments to send to Account Officer</b></div>
+                <textarea cols="30" rows="3" formControlName="comments" class="form-control"></textarea>
+            </div>
+            <button type="button" class="btn btn-default" (click)="updateRecord(requestForm.value)"  >Update</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "3ed02180-1cbd-40f7-9764-9b7a744dee67",
+		"name": "MCB Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27672686"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/user/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"system\",\r\n    \"password\" : \"welcome\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/request/list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJpYXQiOjE2ODUxNjA3MTgsImV4cCI6MTY4NTI0NzExOH0.yAUXlEcPtrm9Om2WBTGuwkog7ITzko1RPXel6HX3yRS6ctj2broMJojZYqgRts5iDEYCWnCOzIHvoiXKlGGldQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/request/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/request/unassigned",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJpYXQiOjE2ODUwODAzODksImV4cCI6MTY4NTE2Njc4OX0.4VtgABWGqf2vMBfTs82YSojjnu0HM4kcvn0zGUu7NdMy0jHktCaodBEmY46LgHQy5bZ7FmO0T1REytZpc8aAAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/request/unassigned",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"unassigned"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/request/updateByOfficer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJpYXQiOjE2ODQ5OTIxNDksImV4cCI6MTY4NTA3ODU0OX0.VMyHh8vswq8IZNq3_Yj_13zyeOuFu8fE558bWxAucguNV2xM5zEMSR6EyuyZ82IRXCxGKbTzPivxbWn2pC1MRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\":[1],\r\n    \"officerUserName\":\"system\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/request/updateByOfficer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"updateByOfficer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/request/officer?officerUsername=system",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJpYXQiOjE2ODUxMDM0MDMsImV4cCI6MTY4NTE4OTgwM30.GHmIPUPbp24ZHW22MpXhihBaYBk_WyUiYVnhXw0mxEWWyz4OEzCMONAq9CRe8tl4e3X4ZxExAgSIAFYHIOTdpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/request/officer?officerUsername=system",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"officer"
+					],
+					"query": [
+						{
+							"key": "officerUsername",
+							"value": "system"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/request/updatePayments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJpYXQiOjE2ODQ5OTIxNDksImV4cCI6MTY4NTA3ODU0OX0.VMyHh8vswq8IZNq3_Yj_13zyeOuFu8fE558bWxAucguNV2xM5zEMSR6EyuyZ82IRXCxGKbTzPivxbWn2pC1MRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\":[1],\r\n    \"status\":\"Reject\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/request/updatePayments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"updatePayments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/request/verified?userName=system",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJpYXQiOjE2ODUxNjA3MTgsImV4cCI6MTY4NTI0NzExOH0.yAUXlEcPtrm9Om2WBTGuwkog7ITzko1RPXel6HX3yRS6ctj2broMJojZYqgRts5iDEYCWnCOzIHvoiXKlGGldQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/request/verified?userName=system",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"verified"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "system"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/request/report?date=2023-05-25",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJpYXQiOjE2ODQ5OTIxNDksImV4cCI6MTY4NTA3ODU0OX0.VMyHh8vswq8IZNq3_Yj_13zyeOuFu8fE558bWxAucguNV2xM5zEMSR6EyuyZ82IRXCxGKbTzPivxbWn2pC1MRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/request/report?date=2023-05-25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"report"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2023-05-25"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

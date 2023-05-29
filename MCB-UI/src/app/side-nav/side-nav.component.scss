@@ -1,0 +1,21 @@
+.simplebar-content-wrapper{
+    margin-left : 10px;
+    background-color: antiquewhite;
+    // max-width: 12rem;
+    // min-height: 100%;
+    height: calc(100vh - 115px);
+    
+}
+.metismenu{
+    
+
+}
+
+.menuItem{
+    padding: 8px 5px 8px 20px;
+    // margin-left: 1rem;
+    cursor: pointer;
+}
+ .active{
+    background-color: #e9b36c;
+}
