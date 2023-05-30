@@ -10,3 +10,8 @@ Application Guide:
       a) run : npm install -f
 	b) run : npm start
 	c) run it on any browser ex : http://localhost:4200
+
+
+4) UserName and password : 
+  userName = system
+  password = welcome
